@@ -1,0 +1,121 @@
+// Version: 1.0.0
+type AdoptionApplication__606995505 =
+  {
+    address : Text;
+    applicantName : Text;
+    city : Text;
+    createdAt : Timestamp__301639476;
+    email : Text;
+    experience : Text;
+    homeType : Text;
+    id : Text;
+    petId : Nat;
+    phone : Text;
+    reason : Text;
+    state : Text;
+    zip : Text
+  };
+type BlogArticle__1060352343 =
+  {
+    author : Text;
+    content : Text;
+    excerpt : Text;
+    id : Nat;
+    imageUrl : Text;
+    publishDate : Timestamp__301639476;
+    readTime : Text;
+    tags : [Text];
+    title : Text
+  };
+type ContactMessage__89304069 =
+  {
+    createdAt : Timestamp__301639476;
+    email : Text;
+    id : Text;
+    message : Text;
+    name : Text;
+    subject : Text
+  };
+type FosterApplication__1017075117 =
+  {
+    createdAt : Timestamp__301639476;
+    duration : Text;
+    email : Text;
+    experience : Text;
+    homeType : Text;
+    id : Text;
+    name : Text;
+    petType : Text;
+    phone : Text
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Pet__39712719 =
+  {
+    age : Nat;
+    available : Bool;
+    breed : Text;
+    description : Text;
+    gender : Text;
+    healthStatus : Text;
+    id : Nat;
+    location : Text;
+    name : Text;
+    photos : [Text];
+    shelterEmail : Text;
+    shelterId : Text;
+    shelterName : Text;
+    shelterPhone : Text;
+    species : Text;
+    vaccinationStatus : Text
+  };
+type Timestamp__301639476 = Int;
+type VolunteerRegistration__445297902 =
+  {
+    availability : [Text];
+    createdAt : Timestamp__301639476;
+    email : Text;
+    id : Text;
+    interest : Text;
+    name : Text;
+    phone : Text
+  };
+actor {
+  stable adminState : {var principal : ?Principal};
+  stable adoptionApplications :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?AdoptionApplication__606995505]];
+      var elementIndex : Nat__490723111
+    };
+  stable blogArticles :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?BlogArticle__1060352343]];
+      var elementIndex : Nat__490723111
+    };
+  stable contactMessages :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactMessage__89304069]];
+      var elementIndex : Nat__490723111
+    };
+  stable fosterApplications :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?FosterApplication__1017075117]];
+      var elementIndex : Nat__490723111
+    };
+  stable pets :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Pet__39712719]];
+      var elementIndex : Nat__490723111
+    };
+  stable volunteerRegistrations :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?VolunteerRegistration__445297902]];
+      var elementIndex : Nat__490723111
+    }
+};

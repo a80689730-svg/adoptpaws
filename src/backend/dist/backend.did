@@ -1,0 +1,68 @@
+type Timestamp = int;
+type Pet = 
+ record {
+   age: nat;
+   available: bool;
+   breed: text;
+   description: text;
+   gender: text;
+   healthStatus: text;
+   id: nat;
+   location: text;
+   name: text;
+   photos: vec text;
+   shelterEmail: text;
+   shelterId: text;
+   shelterName: text;
+   shelterPhone: text;
+   species: text;
+   vaccinationStatus: text;
+ };
+type BlogArticle = 
+ record {
+   author: text;
+   content: text;
+   excerpt: text;
+   id: nat;
+   imageUrl: text;
+   publishDate: Timestamp;
+   readTime: text;
+   tags: vec text;
+   title: text;
+ };
+type AdoptionApplication = 
+ record {
+   address: text;
+   applicantName: text;
+   city: text;
+   createdAt: Timestamp;
+   email: text;
+   experience: text;
+   homeType: text;
+   id: text;
+   petId: nat;
+   phone: text;
+   reason: text;
+   state: text;
+   zip: text;
+ };
+service : {
+  applyToFoster: (name: text, email: text, phone: text, homeType: text,
+   experience: text, petType: text, duration: text) -> (text);
+  getAdminPrincipal: () -> (opt principal) query;
+  getBlogArticle: (id: nat) -> (opt BlogArticle) query;
+  getFeaturedPets: () -> (vec Pet) query;
+  getPet: (id: nat) -> (opt Pet) query;
+  listAdoptionApplications: () -> (vec AdoptionApplication);
+  listBlogArticles: () -> (vec BlogArticle) query;
+  listPets: (species: opt text, ageMin: opt nat, ageMax: opt nat, breed:
+   opt text, location: opt text) -> (vec Pet) query;
+  registerVolunteer: (name: text, email: text, phone: text, availability:
+   vec text, interest: text) -> (text);
+  sendContactMessage: (name: text, email: text, subject: text, message:
+   text) -> (text);
+  setAdmin: () -> (text);
+  submitAdoptionApplication: (petId: nat, applicantName: text, email: 
+   text, phone: text, address: text, city: text, state: text, zip: text,
+   experience: text, homeType: text, reason: text) -> (text);
+}

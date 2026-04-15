@@ -1,0 +1,27 @@
+{
+  "overview": "AdoptPaws is a full-featured pet adoption website that connects animals in need with loving homes. It features a warm, professional design with all the tools people need to browse available pets, learn about the adoption process, and submit applications — all in one place.",
+  "features": [
+    "Homepage with 'Adopt, Don't Shop' banner and featured pets",
+    "Available Pets listing with search and filters (type, age, breed, location)",
+    "Pet Detail pages with photo gallery and adoption application button",
+    "Adoption Form with full validation and backend storage",
+    "Adoption Process step-by-step explainer",
+    "Success Stories with before/after photos and testimonials",
+    "Blog/Resources with 3 sample articles",
+    "Get Involved page with volunteer and foster forms",
+    "About Us with mission, vision, and partnerships",
+    "Contact Us with form and social media links",
+    "Mobile-friendly responsive design",
+    "White, light blue, and green color palette for trust and calm"
+  ],
+  "category": "showcase",
+  "tags": [
+    "pet-adoption",
+    "animals",
+    "nonprofit",
+    "showcase",
+    "forms",
+    "mobile-friendly"
+  ],
+  "last_updated": "2026-04-15T03:59:02.298Z"
+}
